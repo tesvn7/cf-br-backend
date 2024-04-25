@@ -3,10 +3,8 @@ import pandas as pd
 import numpy as np
 from json import loads
 from functools import lru_cache
-from mangum import Mangum
 
 app = FastAPI()
-handler = Mangum(app)
 
 # popular-df loading function
 @lru_cache(maxsize=128, typed=False)

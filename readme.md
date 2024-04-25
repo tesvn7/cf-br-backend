@@ -20,7 +20,6 @@ The data files and recommendation function are cached with an LRU cache for perf
 - FastAPI
 - Pandas
 - Numpy
-- Mangum
 
 ## Requirements
 

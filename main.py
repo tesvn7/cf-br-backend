@@ -60,6 +60,10 @@ def recommend_book(book_name: str):
     recommended = [{"Book-Title": title, "Book-Author": author, "Image-URL-M": image} for title, author, image in data]
     return recommended
 
+@app.get('/')
+async def welcome():
+    return {"message": "Welcome to the Book Recommender API"}
+
 # popular-df-api
 @app.get('/popular')
 async def popular_books():
@@ -70,3 +74,7 @@ async def popular_books():
 async def recommend_books(book_name: str):
     result = recommend_book(book_name)   
     return result
+
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app)
